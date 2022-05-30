@@ -1,7 +1,36 @@
 # blockchain-voting-system
 An electronic voting system based on Blockchain technology for the Presidential Election of Sri Lanka.
 
-## **Development Environment**
+## Overview
+There are 3 users of the system.
+ - Election Commissioner
+ - Election Official
+ - Voter
+ 
+ The functions of each user are as follows.
+ 
+ **Election Commissioner-**
+ - Candidate Registration/Management
+ - Official Registration/Management
+ - Get Election Results
+ 
+ **Election Official-**
+ - Voter Registration
+ - Start Election Server
+ - Join Election Server
+
+ **Voter-**
+ - Login
+ - Cast Vote
+
+
+**The main focus of this system is the voting process. The voting process integrates Blockchain technology to securely store the votes. The central MySQL database stores all the user data (voter details, official details, candidate details). The votes are verified using the NIC of the voter and then encrypted and stored in the Blockchain. A copy of the Blockchain is written to the storage of each client connected to the Blockchain Network at the end of an election. An overview diagram of the voting process is shown below.**
+
+
+![blockchainvoting](https://user-images.githubusercontent.com/70063725/170988514-e8e4eb83-30e4-4c00-9daa-72624d03008c.jpg)
+
+
+## Development Environment
 
  - Apache NetBeans IDE 12.0
  - JDK-8
@@ -9,6 +38,7 @@ An electronic voting system based on Blockchain technology for the Presidential 
 
 ## Database Configuration
 Import the database file 'slelection2022.sql' from MySQL.
+
 Edit the connection string in blockchainvotingsystem/SqlConn.java (line 21).
 
         try 
@@ -29,3 +59,6 @@ Edit the connection string in blockchainvotingsystem/SqlConn.java (line 21).
 ![off_startsv](https://user-images.githubusercontent.com/70063725/170942966-72b0d4e0-c93a-4860-b508-7ddf7203fec0.PNG)
 ![vote1](https://user-images.githubusercontent.com/70063725/170942971-ffbfec6b-f633-464a-845d-f1e3c4ada65a.PNG)
 ![vote2](https://user-images.githubusercontent.com/70063725/170942951-48d710a2-15e0-4f75-9604-14d762f09669.PNG)
+
+
+**Credits -** [pystone](https://github.com/pystone/ProcessMigration), [hvudeshi](https://github.com/hvudeshi/Blockchain-based_E-Voting)
